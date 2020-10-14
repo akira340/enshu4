@@ -3,6 +3,7 @@
 body {
   color: red;
   background-color: black;
+  margin: 10px 50px;
 }
 
 td, th {
@@ -12,4 +13,7 @@ td, th {
 h1 {
   background-color: blue;
   padding: 10px;
+}
+
+h2 {
 }
