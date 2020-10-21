@@ -13,18 +13,21 @@ int main(void) {
   char str[128];
   int i, n;
 
-  FILE *fp = fopen("problem.txt", "r");
+  FILE *fp = fopen("data0301.txt", "r");
 
   printf("Content-type: text/html\n\n");
   printf("<!DOCTYPE html>\n");
   printf("<html lang=\"ja\">\n");
   meta();
   printf("<head>\n");
-  title("Problem");
-  link("penshu4_2020/67190209/ex03/introduction.css");
+  title("風に吹かれて");
 
   printf("</head>\n");
   printf("<body>\n");
+
+  h1("風に吹かれて");
+  printf("How many codes must a student write<br>\n");
+  printf("Before he gets a credit?<br>\n");
 
   fscanf(fp, "%s", str);
   p(str);
