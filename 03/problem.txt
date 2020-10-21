@@ -1,0 +1,6 @@
+h1タグをの文字を赤に変えたい。正しい記述はどれ？
+1
+h1 {font-color: red;}
+h1 {word-color: red;}
+h1 {letter-color: red;}
+h1 {color: red;}

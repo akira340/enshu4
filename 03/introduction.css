@@ -1,0 +1,22 @@
+@charset "utf8";
+
+body {
+  color: red;
+  background-color: black;
+  margin: 10px 50px;
+}
+
+td, th {
+  border: solid 1px red;
+}
+
+h1 {
+  background-color: blue;
+  padding: 10px;
+}
+<<<<<<< HEAD
+=======
+
+h2 {
+}
+>>>>>>> a8158f15560c73c7f0de2b3ea5f733d4f675e355

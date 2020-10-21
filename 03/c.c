@@ -1,8 +1,6 @@
 #include<stdio.h>
 
-void p(char *s) {
-  printf("<p>%s</p>\n", s);
-}
+void p(char *s) {printf("<p>%s</p>\n", s);}
 
 int main(void) {
   char str[128];
