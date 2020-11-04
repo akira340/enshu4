@@ -1,0 +1,7 @@
+3
+cin >> $a;
+$a = input();
+$a = &ltSTDIN&gt;
+$a = &ltIN&gt;
+perlでキーボードから入力して変数aに代入したい。
+正しいのはどれ？
