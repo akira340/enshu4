@@ -1,0 +1,2 @@
+psql -h kite.cs.miyazaki-u.ac.jp -U enuser2058 endb2058
+enpass2058
