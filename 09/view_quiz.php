@@ -14,6 +14,8 @@
 
 <h1>データベースから取得したデータの表示</h1>
 
+<p>INSERT SUCCESS!!!</p>
+
 <?php
 
 // データベースへの接続
@@ -58,5 +60,7 @@ print "</table>\n";
 
 ?>
 
+<br>
+<a href="select_quiz.php">戻る</a>
 </body>
 </html>

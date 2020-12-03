@@ -20,20 +20,34 @@ if ($con == false) {
   exit;
 }
 
-@$result = pg_query("insert into quiz2 values(".$_POST['id']."'".$_POST['a1']."','".$_POST['a2']."','".$_POST['a3']."','".$_POST['a4']."','".$_POST['q']."','".$_POST['id']."'");
-if($result == false){
-  print"DATA ACQUISITION ERROR\n";
-  exit;
+$c_names = array('a1', 'a2', 'a3', 'a4', 'q', 'ans');
+
+$input_ok = true;
+for($i = 0; $i < count($c_names); $i++)
+  if(isset($_POST[$c_names[$i]]) == false)
+    $input_ok = false;
+
+if($input_ok) {
+  @$result = pg_query("select max(id) from quiz2");
+  $id = pg_fetch_result($result, 0, 0);
+  $id += 1;
+  $sql = "insert into quiz2 values({$_POST['ans']},'{$_POST['a1']}','{$_POST['a2']}','{$_POST['a3']}','{$_POST['a4']}','{$_POST['q']}',{$id})";
+  @$result = pg_query($sql);
+  if($result == false)
+    print "INVALID INPUT\n";
+  else {
+    print "INSERT SUCCESS\n";
+    header("Location: view_quiz.php");
+    exit;
+  }
 }
 
 
 ?>
 <form action="register.php" method="post">
 
-
 <ul>
 
-<li>問題ID<input type="text" name="id"></li>
 <li>問題文<input type="text" size="50" name="q"> </li>
 <li>選択肢1<input type="text" size="50" name="a1"> </li>
 <li>選択肢2<input type="text" size="50" name="a2"> </li>
@@ -47,6 +61,6 @@ if($result == false){
 </form>
 
 <hr>
-<a href="index.php">戻る</a>
+<a href="select_quiz.php">戻る</a>
 </body>
 </html>

@@ -5,14 +5,14 @@
 <head>
 <link rel="stylesheet" type="text/css" href="/~tyf7207/css/yamaba01.css">
 <title>
-データベースから取得したデータの表示
+小テスト一覧
 </title>
 <meta charset="utf-8">
 </head>
 
 <body>
 
-<h1>データベースから取得したデータの表示</h1>
+<h1>小テスト一覧</h1>
 
 <?php
 
@@ -22,7 +22,6 @@ if ($con == false){
   print("DATABASE CONNECTION ERROR\n");
   exit;
 }
-
 
 $sql1 = "select * from quiz2"; // SQLのコマンド文を文字列に格納する。
 @$result = pg_query($sql1); // SQLのコマンドでデータベースに問い合わせする。
@@ -56,5 +55,7 @@ for($i = 0; $i < $m; $i++) {
 <br>
 <input type="submit">
 </form>
+<br>
+<a href="register.php">新規問題登録</a>
 </body>
 </html>
