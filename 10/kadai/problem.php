@@ -2,7 +2,6 @@
 include_once("auth.inc");
 auth();
 ?>
-
 <!DOCTYPE html>
 
 <html lang="ja">
